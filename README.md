@@ -149,8 +149,3 @@ app.get("/dados/:id", listaritensEspecifico)
 app.put("/dados/:id", atualizaritens)
 app.delete("/dados/:id", deletaritens)
 ```
-### Testando os comandos
-
-
-
-
