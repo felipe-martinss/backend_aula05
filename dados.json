@@ -1,0 +1,26 @@
+[
+    {
+        "id": "01",
+        "item": "Mouse Ergonômico Rapoo",
+        "local": "Escritório 02",
+        "dataRegistro": "2025-04-06",
+        "valor": 198.00,
+        "patrimonio": "PAT-03305"
+    },
+    {   
+        "id": "02",
+        "item": "Teclado Mecânico Logitech G",
+        "local": "Escritório 05",
+        "dataRegistro": "2026-03-23",
+        "valor": 520.00,
+        "patrimonio": "PAT-50432"
+    },
+    {
+        "id": "03",
+        "item": "Notebook Acer Nitro 5",
+        "local": "Escritório 03",
+        "dataRegistro": "2026-04-15",
+        "valor": 7000.00,
+        "patrimonio": "PAT-78900"
+    }
+]
