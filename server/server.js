@@ -17,7 +17,7 @@ const listaritensEspecifico = (req, res) => {
     })
 
     if (status == 0) {
-        res.status(404).send("itens não encontrado");
+        res.status(404).send("Item não encontrado");
     }
 }
 
@@ -25,9 +25,9 @@ const listaritensEspecifico = (req, res) => {
 const cadastraritens = (req, res) => {
     if (!req.body || req.body.id != undefined) {
         itens.push(req.body)
-        res.send("Novo itens adicionado com sucesso!")
+        res.send("Novo item adicionado com sucesso!")
     } else {
-        res.send("Erro ao adicionar um novo itens.")
+        res.send("Erro ao adicionar um novo item.")
     }
 }
 
@@ -36,13 +36,13 @@ const atualizaritens = (req, res) => {
     const dados = req.body
     let status = 0
 
-  itens.forEach((itens, indice) => {
-        if (itens.id == id) {
-            itens.itens = dados.itens;
-            itens.local = dados.local;
-            itens.dataRegistro = dados.dataRegistro;
-            itens.valor = dados.valor;
-            itens.patrimonio = dados.patrimonio;
+  itens.forEach((item, indice) => {
+        if (item.id == id) {
+            item.item = dados.item;
+            item.local = dados.local;
+            item.dataRegistro = dados.dataRegistro;
+            item.valor = dados.valor;
+            item.patrimonio = dados.patrimonio;
             status = 1;
         }
     });
@@ -66,9 +66,9 @@ const atualizaritens = (req, res) => {
         })
 
         if (status == 1) {
-            res.send("itens excluido com sucesso!")
+            res.send("Item excluído com sucesso!")
         } else {
-            res.status(404).send("itens não encontrado")
+            res.status(404).send("Item não encontrado")
         }
     }
 
@@ -83,6 +83,5 @@ app.put("/dados/:id", atualizaritens)
 app.delete("/dados/:id", deletaritens)
 
 app.listen(porta, () => {
-    console.log(`Servidor http://127.0.0.1:${porta}`)
-    console.log(`Cliente http://127.0.0.1:5500/cliente/`)
+    console.log(`Servidor http://127.0.0.1:${porta}/dados`)
 })
