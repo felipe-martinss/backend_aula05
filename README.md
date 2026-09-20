@@ -53,6 +53,11 @@ const listaritensEspecifico = (req, res) => {
             status = 1
         }
     })
+
+    if (status == 0) {
+        res.status(404).send("Item não encontrado");
+    }
+}
 ```
 
 Na função de listar por id é feito o seguinte, primeiro definimos a variável, depois é obtido o ID diretamente do parâmetro da URL e definimos uma variável status para servir como uma "marcação" do código
